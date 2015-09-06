@@ -1,0 +1,29 @@
+CREATE DATABASE MVCSample;
+GO
+
+USE MVCSample;
+GO
+
+CREATE TABLE Students
+(
+	Id INT NOT NULL IDENTITY(1, 1),
+	FirstName VARCHAR(255) NOT NULL,
+	LastName VARCHAR(255) NOT NULL,
+	PRIMARY KEY (Id)
+);
+
+CREATE TABLE Groups
+(
+	Id INT NOT NULL IDENTITY(1, 1),
+	Name VARCHAR(255) NOT NULL,
+	PRIMARY KEY(Id)
+);
+
+CREATE TABLE GroupStudents
+(
+	GroupId INT NOT NULL,
+	StudentId INT NOT NULL,
+	PRIMARY KEY (GroupId, StudentId),
+	FOREIGN KEY (GroupId) REFERENCES Groups(Id),
+	FOREIGN KEY (StudentId) REFERENCES Students(Id)
+);

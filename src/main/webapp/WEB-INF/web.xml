@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        metadata-complete="false"
+        version="3.0">
+
+    <display-name>MVCSample</display-name>
+
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>com.github.osovitskiy.web.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+        <url-pattern>/student/*</url-pattern>
+        <url-pattern>/group/*</url-pattern>
+    </servlet-mapping>
+</web-app>

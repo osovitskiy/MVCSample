@@ -1,0 +1,21 @@
+group 'com.github.osovitskiy'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'jetty'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'javax.servlet:javax.servlet-api:3.0.1'
+    compile 'javax.servlet:jstl:1.2'
+    compile 'net.sourceforge.jtds:jtds:1.3.1'
+}
+
+httpPort = 8080
+stopPort = 9080
+stopKey = "stopKey"
